@@ -3,11 +3,10 @@ import DefaultImg from '../resources/img.jpg';
 import './style.css'
 
 export const Bttn = ( {value}) =>{
-    let pathImg = DefaultImg;
 
-    const [img, setImg] = useState (pathImg);
-    const handleImg = () => {
-        setImg( () => "../resources/Solera_Logo.png")
+    const [BaseImg, setBaseImg] = useState (DefaultImg);
+    const handleBaseImg = () => {
+        setBaseImg( () => "../resources/Solera_Logo.png")
     }
     
     
@@ -15,9 +14,9 @@ export const Bttn = ( {value}) =>{
         <div className='center'>
             <div className="left-sidebar">
                 <div>
-                    <img src={img}/>
+                    <img src={BaseImg}/>
                 </div>
-                <button onClick={handleImg}>Upload Base Image</button>
+                <button onClick={ handleBaseImg }> Upload Base Image </button>
                 <p>Estamos intentando  izquierda</p>
             </div> 
             
